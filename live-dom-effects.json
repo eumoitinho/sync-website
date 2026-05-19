@@ -1,0 +1,477 @@
+{
+  "counts": {
+    "[data-framer-appear-id]": 5,
+    "[data-framer-name]": 398,
+    "[data-framer-component-type]": 134,
+    "[data-framer-motion-value]": 0,
+    "[data-border]": 1,
+    "[style*=\"translate\"]": 226,
+    "[style*=\"opacity\"]": 605
+  },
+  "framerScripts": [
+    "https://events.framer.com/script?v=2",
+    "framer/appear",
+    "framer/appear",
+    "https://framerusercontent.com/sites/7AAQhg0kws05VhtOXvWGQx/script_main.CFqyls1f.mjs"
+  ],
+  "styles": [
+    {
+      "i": 0,
+      "len": 18491,
+      "sample": "/* cyrillic */\n@font-face {\n  font-family: 'Geist';\n  font-style: normal;\n  font-weight: 500;\n  font-display: swap;\n  src: url(https://fonts.gstatic.com/s/geist"
+    },
+    {
+      "i": 1,
+      "len": 146015,
+      "sample": "html,body,#main{box-sizing:border-box;margin:0;padding:0}:root{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}*{box-sizing:border-box;-web"
+    },
+    {
+      "i": 2,
+      "len": 0,
+      "sample": ""
+    },
+    {
+      "i": 3,
+      "len": 3660,
+      "sample": "\n#__framer-editorbar-container {\n    align-items: center;\n    display: flex;\n    gap: 8px;\n    position: fixed;\n    z-index: calc(2147483647);\n    width: max-co"
+    },
+    {
+      "i": 4,
+      "len": 703,
+      "sample": "\n#__framer-editorbar {\n    /* https://sergeyski.com/css-color-scheme-and-iframes-lessons-learned-from-disqus-background-bug */\n    color-scheme: light dark;\n   "
+    },
+    {
+      "i": 5,
+      "len": 97,
+      "sample": ":root body { background: var(--token-288ffea9-8735-42f9-b14e-c55b83bbe709, rgb(251, 248, 243)); }"
+    },
+    {
+      "i": 6,
+      "len": 96,
+      "sample": "html body { background: var(--token-288ffea9-8735-42f9-b14e-c55b83bbe709, rgb(251, 248, 243)); }"
+    }
+  ],
+  "bodyHeight": 12054,
+  "examples": [
+    {
+      "tag": "DIV",
+      "text": "",
+      "cls": "framer-1nfij1y",
+      "style": null,
+      "name": "Glass Effect",
+      "appear": null,
+      "rect": {
+        "x": 456,
+        "y": -852,
+        "w": 744,
+        "h": 470.421875
+      }
+    },
+    {
+      "tag": "DIV",
+      "text": "FormanceGet in TouchGet in Touch",
+      "cls": "framer-15vx8jz-container",
+      "style": "opacity: 1; transform: none; will-change: transform;",
+      "name": null,
+      "appear": "15vx8jz",
+      "rect": {
+        "x": 0,
+        "y": -828,
+        "w": 1200,
+        "h": 64
+      }
+    },
+    {
+      "tag": "NAV",
+      "text": "FormanceGet in TouchGet in Touch",
+      "cls": "framer-CDwos framer-18cdrcn framer-v-18cdrcn",
+      "style": "height: 100%; width: 100%; opacity: 1;",
+      "name": "Desktop",
+      "appear": null,
+      "rect": {
+        "x": 0,
+        "y": -828,
+        "w": 1200,
+        "h": 64
+      }
+    },
+    {
+      "tag": "DIV",
+      "text": "FormanceGet in TouchGet in Touch",
+      "cls": "framer-de2htc",
+      "style": "background-color: rgba(0, 0, 0, 0); border-radius: 0px; opacity: 1;",
+      "name": "Container",
+      "appear": null,
+      "rect": {
+        "x": 40,
+        "y": -826,
+        "w": 1120,
+        "h": 60
+      }
+    },
+    {
+      "tag": "DIV",
+      "text": "Formance",
+      "cls": "framer-h7xhis",
+      "style": "opacity: 1;",
+      "name": "Top",
+      "appear": null,
+      "rect": {
+        "x": 40,
+        "y": -826,
+        "w": 174,
+        "h": 60
+      }
+    },
+    {
+      "tag": "A",
+      "text": "Formance",
+      "cls": "framer-14sm5sj framer-27y3s8",
+      "style": "opacity: 1;",
+      "name": "Logo",
+      "appear": null,
+      "rect": {
+        "x": 50,
+        "y": -816,
+        "w": 164,
+        "h": 40
+      }
+    },
+    {
+      "tag": "DIV",
+      "text": "Formance",
+      "cls": "framer-5lgwgs",
+      "style": "--extracted-r6o4lv: var(--token-552258ca-1ffb-4ed5-a59b-3c1658009e73, rgb(20, 17, 17)); --framer-paragraph-spacing: 0px; transform: none; opacity: 1;",
+      "name": "Logo Text",
+      "appear": null,
+      "rect": {
+        "x": 50,
+        "y": -816,
+        "w": 152.0546875,
+        "h": 40
+      }
+    },
+    {
+      "tag": "DIV",
+      "text": "",
+      "cls": "framer-o1zmjc",
+      "style": "background-color: rgb(244, 73, 48); border-radius: 100%; opacity: 1;",
+      "name": "Ellipse 418",
+      "appear": null,
+      "rect": {
+        "x": 206,
+        "y": -793,
+        "w": 8,
+        "h": 8
+      }
+    },
+    {
+      "tag": "DIV",
+      "text": "Get in TouchGet in Touch",
+      "cls": "framer-n33o1f-container",
+      "style": "opacity: 1;",
+      "name": null,
+      "appear": null,
+      "rect": {
+        "x": 997,
+        "y": -819,
+        "w": 163,
+        "h": 46
+      }
+    },
+    {
+      "tag": "A",
+      "text": "Get in TouchGet in Touch",
+      "cls": "framer-LVs7j framer-jij07 framer-joi4e2 framer-v-vunel1 framer-1a1x385",
+      "style": "background-color: var(--token-1ba3eb5c-3d1d-417e-a110-baadc5d93e3d, rgb(255, 255, 255)); border-radius: 999px; opacity: 1;",
+      "name": "Small",
+      "appear": null,
+      "rect": {
+        "x": 997,
+        "y": -819,
+        "w": 163,
+        "h": 46
+      }
+    },
+    {
+      "tag": "DIV",
+      "text": "Get in TouchGet in Touch",
+      "cls": "framer-1aou9i4",
+      "style": "opacity: 1;",
+      "name": "Text",
+      "appear": null,
+      "rect": {
+        "x": 1013,
+        "y": -809,
+        "w": 110,
+        "h": 26
+      }
+    },
+    {
+      "tag": "DIV",
+      "text": "Get in Touch",
+      "cls": "framer-13ezhy6",
+      "style": "--extracted-r6o4lv: var(--token-552258ca-1ffb-4ed5-a59b-3c1658009e73, rgb(20, 17, 17)); --framer-paragraph-spacing: 0px; transform: translate(-50%, -50%); opacity: 1;",
+      "name": "1",
+      "appear": null,
+      "rect": {
+        "x": 1023.4609375,
+        "y": -809,
+        "w": 89.078125,
+        "h": 26
+      }
+    },
+    {
+      "tag": "DIV",
+      "text": "Get in Touch",
+      "cls": "framer-141c93o",
+      "style": "--extracted-r6o4lv: var(--token-552258ca-1ffb-4ed5-a59b-3c1658009e73, rgb(20, 17, 17)); --framer-paragraph-spacing: 0px; transform: translate(-50%, -50%); opacity: 1;",
+      "name": "2",
+      "appear": null,
+      "rect": {
+        "x": 1023.4609375,
+        "y": -785.0859375,
+        "w": 89.078125,
+        "h": 26
+      }
+    },
+    {
+      "tag": "DIV",
+      "text": "",
+      "cls": "framer-snvigz",
+      "style": "image-rendering: pixelated; flex-shrink: 0; opacity: 1;",
+      "name": "Arrow Up",
+      "appear": null,
+      "rect": {
+        "x": 1123,
+        "y": -806,
+        "w": 21,
+        "h": 20
+      }
+    },
+    {
+      "tag": "SECTION",
+      "text": "FormanceSolutions forBusinessscrollIdentify the key barriers that prevent your b",
+      "cls": "framer-90buus",
+      "style": null,
+      "name": "Hero",
+      "appear": null,
+      "rect": {
+        "x": 0,
+        "y": -852,
+        "w": 1200,
+        "h": 1426.4140625
+      }
+    },
+    {
+      "tag": "DIV",
+      "text": "FormanceSolutions forBusinessscrollIdentify the key barriers that prevent your b",
+      "cls": "framer-3aztsh",
+      "style": null,
+      "name": "Container",
+      "appear": null,
+      "rect": {
+        "x": 0,
+        "y": -852,
+        "w": 1200,
+        "h": 1426.4140625
+      }
+    },
+    {
+      "tag": "DIV",
+      "text": "FormanceSolutions forBusinessscrollIdentify the key barriers that prevent your b",
+      "cls": "framer-1kwrikc",
+      "style": null,
+      "name": "Main",
+      "appear": null,
+      "rect": {
+        "x": 0,
+        "y": -852,
+        "w": 1200,
+        "h": 1426.4140625
+      }
+    },
+    {
+      "tag": "DIV",
+      "text": "FormanceSolutions forBusinessscrollIdentify the key barriers that prevent your b",
+      "cls": "framer-zirpmv",
+      "style": null,
+      "name": "Container",
+      "appear": null,
+      "rect": {
+        "x": 40,
+        "y": -672,
+        "w": 1120,
+        "h": 1246.4140625
+      }
+    },
+    {
+      "tag": "DIV",
+      "text": "FormanceSolutions forBusinessscrollIdentify the key barriers that prevent your b",
+      "cls": "framer-1494x2e",
+      "style": null,
+      "name": "Header Section",
+      "appear": null,
+      "rect": {
+        "x": 40,
+        "y": -672,
+        "w": 1120,
+        "h": 507.59375
+      }
+    },
+    {
+      "tag": "DIV",
+      "text": "FormanceSolutions forBusiness",
+      "cls": "framer-1k5outq",
+      "style": null,
+      "name": "Title Block",
+      "appear": null,
+      "rect": {
+        "x": 40,
+        "y": -672,
+        "w": 1120,
+        "h": 324
+      }
+    },
+    {
+      "tag": "DIV",
+      "text": "FormanceSolutions forBusiness",
+      "cls": "framer-4719u1",
+      "style": "transform:none",
+      "name": "Title Text",
+      "appear": null,
+      "rect": {
+        "x": 40,
+        "y": -672,
+        "w": 800,
+        "h": 324
+      }
+    },
+    {
+      "tag": "SPAN",
+      "text": "F",
+      "cls": "",
+      "style": "display: inline-block; opacity: 1; transform: none; will-change: transform;",
+      "name": null,
+      "appear": null,
+      "rect": {
+        "x": 40,
+        "y": -672,
+        "w": 72.53125,
+        "h": 108
+      }
+    },
+    {
+      "tag": "SPAN",
+      "text": "o",
+      "cls": "",
+      "style": "display: inline-block; opacity: 1; transform: none; will-change: transform;",
+      "name": null,
+      "appear": null,
+      "rect": {
+        "x": 112.53125,
+        "y": -672,
+        "w": 74.1640625,
+        "h": 108
+      }
+    },
+    {
+      "tag": "SPAN",
+      "text": "r",
+      "cls": "",
+      "style": "display: inline-block; opacity: 1; transform: none; will-change: transform;",
+      "name": null,
+      "appear": null,
+      "rect": {
+        "x": 186.6953125,
+        "y": -672,
+        "w": 50.953125,
+        "h": 108
+      }
+    },
+    {
+      "tag": "SPAN",
+      "text": "m",
+      "cls": "",
+      "style": "display: inline-block; opacity: 1; transform: none; will-change: transform;",
+      "name": null,
+      "appear": null,
+      "rect": {
+        "x": 237.6484375,
+        "y": -672,
+        "w": 107.9765625,
+        "h": 108
+      }
+    },
+    {
+      "tag": "SPAN",
+      "text": "a",
+      "cls": "",
+      "style": "display: inline-block; opacity: 1; transform: none; will-change: transform;",
+      "name": null,
+      "appear": null,
+      "rect": {
+        "x": 345.625,
+        "y": -672,
+        "w": 71.3046875,
+        "h": 108
+      }
+    },
+    {
+      "tag": "SPAN",
+      "text": "n",
+      "cls": "",
+      "style": "display: inline-block; opacity: 1; transform: none; will-change: transform;",
+      "name": null,
+      "appear": null,
+      "rect": {
+        "x": 416.9296875,
+        "y": -672,
+        "w": 73.3203125,
+        "h": 108
+      }
+    },
+    {
+      "tag": "SPAN",
+      "text": "c",
+      "cls": "",
+      "style": "display: inline-block; opacity: 1; transform: none; will-change: transform;",
+      "name": null,
+      "appear": null,
+      "rect": {
+        "x": 490.25,
+        "y": -672,
+        "w": 71.71875,
+        "h": 108
+      }
+    },
+    {
+      "tag": "SPAN",
+      "text": "e",
+      "cls": "",
+      "style": "display: inline-block; opacity: 1; transform: none; will-change: transform;",
+      "name": null,
+      "appear": null,
+      "rect": {
+        "x": 561.96875,
+        "y": -672,
+        "w": 72.6484375,
+        "h": 108
+      }
+    },
+    {
+      "tag": "SPAN",
+      "text": "S",
+      "cls": "",
+      "style": "display: inline-block; opacity: 1; transform: none; will-change: transform;",
+      "name": null,
+      "appear": null,
+      "rect": {
+        "x": 40,
+        "y": -564,
+        "w": 81.7734375,
+        "h": 108
+      }
+    }
+  ]
+}

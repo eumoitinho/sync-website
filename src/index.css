@@ -1,0 +1,380 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    overflow-x: hidden;
+  }
+}
+
+@layer utilities {
+  .sync-effects-ready .split-reveal span {
+    opacity: 0 !important;
+    filter: blur(10px);
+    transform: translate3d(0, 28px, 0) !important;
+    transition:
+      opacity 0.65s cubic-bezier(0.22, 1, 0.36, 1),
+      filter 0.65s cubic-bezier(0.22, 1, 0.36, 1),
+      transform 0.65s cubic-bezier(0.22, 1, 0.36, 1);
+    transition-delay: calc(var(--reveal-index, 0) * 22ms);
+  }
+
+  .sync-effects-ready .split-reveal.is-visible span {
+    opacity: 1 !important;
+    filter: blur(0);
+    transform: translate3d(0, 0, 0) !important;
+  }
+
+  .sync-effects-ready .reveal-on-scroll {
+    opacity: 0;
+    filter: blur(8px);
+    transform: translate3d(0, 36px, 0);
+    transition:
+      opacity 0.75s cubic-bezier(0.22, 1, 0.36, 1),
+      filter 0.75s cubic-bezier(0.22, 1, 0.36, 1),
+      transform 0.75s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .sync-effects-ready .reveal-on-scroll.is-visible {
+    opacity: 1;
+    filter: blur(0);
+    transform: translate3d(0, 0, 0);
+  }
+
+  [data-component-id='AboutStatement'] > div {
+    opacity: 1 !important;
+  }
+
+  [data-component-id='AboutStatement'] span {
+    will-change: opacity, filter, transform;
+  }
+
+  .js-parallax {
+    will-change: transform;
+  }
+
+  .js-scroll-marquee {
+    transform: translate3d(0, 0, 0) !important;
+  }
+
+  [data-component-id='ProjectsMarqueeTrack'] ul,
+  [data-component-id='ServicesMarqueeTrack'] ul,
+  [data-component-id='ExpertiseMarqueeTrack'] ul {
+    animation: sync-marquee 42s linear infinite;
+    transform: translate3d(0, 0, 0) !important;
+    will-change: transform;
+  }
+
+  [data-component-id='ServicesMarqueeTrack'] ul {
+    animation-duration: 50s;
+    animation-direction: reverse;
+  }
+
+  [data-component-id='ExpertiseMarqueeTrack'] ul {
+    animation-duration: 46s;
+  }
+
+  [data-component-id='ScrollCue'] .bg-\[\#1440fc\] {
+    animation: sync-scroll-cue 1.55s ease-in-out infinite;
+  }
+
+  [data-component-id='DigitalCampaignsCard'],
+  [data-component-id='GrowthStrategyCard'],
+  [data-component-id='BrandConsultingCard'],
+  [data-component-id='MarketingStrategyCard'],
+  [data-component-id='BrandDevelopmentCard'] {
+    transition:
+      background-color 0.35s ease,
+      color 0.35s ease;
+  }
+
+  [data-component-id='DigitalCampaignsCard']:hover,
+  [data-component-id='GrowthStrategyCard']:hover,
+  [data-component-id='BrandConsultingCard']:hover,
+  [data-component-id='MarketingStrategyCard']:hover,
+  [data-component-id='BrandDevelopmentCard']:hover {
+    background-color: #1440fc !important;
+  }
+
+  [data-component-id='DigitalCampaignsCard']:hover h2,
+  [data-component-id='DigitalCampaignsCard']:hover p,
+  [data-component-id='GrowthStrategyCard']:hover h2,
+  [data-component-id='GrowthStrategyCard']:hover p,
+  [data-component-id='BrandConsultingCard']:hover h2,
+  [data-component-id='BrandConsultingCard']:hover p,
+  [data-component-id='MarketingStrategyCard']:hover h2,
+  [data-component-id='MarketingStrategyCard']:hover p,
+  [data-component-id='BrandDevelopmentCard']:hover h2,
+  [data-component-id='BrandDevelopmentCard']:hover p {
+    color: #fff !important;
+    caret-color: #fff !important;
+  }
+
+  [data-component-id$='ProjectCard'] img,
+  [data-component-id$='PostCard'] img {
+    transition: transform 0.65s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  [data-component-id$='ProjectCard']:hover img,
+  [data-component-id$='PostCard']:hover img {
+    transform: scale(1.06);
+  }
+
+  [data-component-id='HeaderContactButton']:hover > div:first-child > div:first-child,
+  [data-component-id='ExploreProjectsButton']:hover > div:first-child > div:first-child,
+  [data-component-id='ExploreBlogButton']:hover > div:first-child > div:first-child,
+  [data-component-id='FloatingWorkLink']:hover > div:first-child > div:first-child,
+  [data-component-id='FloatingAboutLink']:hover > div:first-child > div:first-child,
+  [data-component-id='FloatingBlogLink']:hover > div:first-child > div:first-child,
+  [data-component-id='FloatingContactLink']:hover > div:first-child > div:first-child,
+  [data-component-id='FooterContactButton']:hover > div:first-child > div:first-child,
+  [data-component-id='FooterWorkLink']:hover > div:first-child > div:first-child,
+  [data-component-id='FooterAboutLink']:hover > div:first-child > div:first-child,
+  [data-component-id='FooterBlogLink']:hover > div:first-child > div:first-child,
+  [data-component-id='FooterContactLink']:hover > div:first-child > div:first-child,
+  [data-component-id='FooterNotFoundLink']:hover > div:first-child > div:first-child,
+  [data-component-id='FooterPrivacyLink']:hover > div:first-child > div:first-child,
+  [data-component-id='FooterLocationLink']:hover > div:first-child > div:first-child,
+  [data-component-id='FooterInstagramLink']:hover > div:first-child > div:first-child,
+  [data-component-id='FooterTwitterLink']:hover > div:first-child > div:first-child {
+    top: -70% !important;
+    transition: top 0.32s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  [data-component-id='HeaderContactButton']:hover > div:first-child > div:nth-child(2),
+  [data-component-id='ExploreProjectsButton']:hover > div:first-child > div:nth-child(2),
+  [data-component-id='ExploreBlogButton']:hover > div:first-child > div:nth-child(2),
+  [data-component-id='FloatingWorkLink']:hover > div:first-child > div:nth-child(2),
+  [data-component-id='FloatingAboutLink']:hover > div:first-child > div:nth-child(2),
+  [data-component-id='FloatingBlogLink']:hover > div:first-child > div:nth-child(2),
+  [data-component-id='FloatingContactLink']:hover > div:first-child > div:nth-child(2),
+  [data-component-id='FooterContactButton']:hover > div:first-child > div:nth-child(2),
+  [data-component-id='FooterWorkLink']:hover > div:first-child > div:nth-child(2),
+  [data-component-id='FooterAboutLink']:hover > div:first-child > div:nth-child(2),
+  [data-component-id='FooterBlogLink']:hover > div:first-child > div:nth-child(2),
+  [data-component-id='FooterContactLink']:hover > div:first-child > div:nth-child(2),
+  [data-component-id='FooterNotFoundLink']:hover > div:first-child > div:nth-child(2),
+  [data-component-id='FooterPrivacyLink']:hover > div:first-child > div:nth-child(2),
+  [data-component-id='FooterLocationLink']:hover > div:first-child > div:nth-child(2),
+  [data-component-id='FooterInstagramLink']:hover > div:first-child > div:nth-child(2),
+  [data-component-id='FooterTwitterLink']:hover > div:first-child > div:nth-child(2) {
+    top: 50% !important;
+    transition: top 0.32s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .js-floating-selection {
+    transition:
+      width 0.28s cubic-bezier(0.22, 1, 0.36, 1),
+      transform 0.28s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .sync-cursor {
+    position: fixed;
+    z-index: 9999;
+    left: -9px;
+    top: -9px;
+    width: 18px;
+    height: 18px;
+    pointer-events: none;
+    border-radius: 999px;
+    background: #1440fc;
+    opacity: 0;
+    mix-blend-mode: multiply;
+    transition:
+      opacity 0.2s ease,
+      width 0.2s ease,
+      height 0.2s ease;
+    will-change: transform;
+  }
+
+  .sync-cursor.is-active {
+    opacity: 0.85;
+  }
+
+  .sync-cursor.is-hovering {
+    width: 32px;
+    height: 32px;
+    opacity: 0.55;
+  }
+
+  @keyframes sync-marquee {
+    from {
+      transform: translate3d(0, 0, 0);
+    }
+
+    to {
+      transform: translate3d(-33.333%, 0, 0);
+    }
+  }
+
+  @keyframes sync-scroll-cue {
+    0%,
+    100% {
+      transform: translateY(1px);
+    }
+
+    50% {
+      transform: translateY(9px);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.001ms !important;
+      animation-iteration-count: 1 !important;
+      scroll-behavior: auto !important;
+      transition-duration: 0.001ms !important;
+    }
+
+    .sync-effects-ready .split-reveal span,
+    .sync-effects-ready .reveal-on-scroll {
+      opacity: 1 !important;
+      filter: none !important;
+      transform: none !important;
+    }
+  }
+
+  @media (max-width: 767px) {
+    [data-component-id='HeroTitle'] h1 {
+      font-size: 62px !important;
+      line-height: 0.95 !important;
+    }
+
+    [data-component-id='ProcessHeadline'] h2,
+    [data-component-id='ExpertiseIntro'] h2,
+    [data-component-id='TestimonialsHeadline'] h2,
+    [data-component-id='BlogHeadline'] h2 {
+      font-size: 42px !important;
+      line-height: 1.08 !important;
+      letter-spacing: 0 !important;
+    }
+
+    [data-component-id='FooterHeadline'] h1 {
+      font-size: 48px !important;
+      line-height: 1.08 !important;
+    }
+
+    [data-component-id='AboutStatement'] > div {
+      font-size: 36px !important;
+      line-height: 1.18 !important;
+    }
+
+    [data-component-id='AboutSection'],
+    [data-component-id='ProcessSection'],
+    [data-component-id='TestimonialsIntro'],
+    [data-component-id='BlogIntro'],
+    [data-component-id='FooterCallToAction'] {
+      flex-direction: column !important;
+      align-items: stretch !important;
+      gap: 48px !important;
+    }
+
+    [data-component-id='ExpertiseSection'] {
+      flex-direction: column !important;
+      align-items: stretch !important;
+      gap: 48px !important;
+    }
+
+    [data-component-id='AboutSidebar'],
+    [data-component-id='AboutMetrics'],
+    [data-component-id='ProcessContent'],
+    [data-component-id='TestimonialsEyebrow'],
+    [data-component-id='TestimonialsHeader'],
+    [data-component-id='BlogEyebrow'],
+    [data-component-id='BlogHeadline'],
+    [data-component-id='FooterMeta'] {
+      width: 100% !important;
+    }
+
+    [data-component-id='ExpertiseSection'] > div,
+    [data-component-id='FooterCallToAction'] > div,
+    [data-component-id='DigitalCampaignsCard'] [class*='w-px'],
+    [data-component-id='GrowthStrategyCard'] [class*='w-px'],
+    [data-component-id='BrandConsultingCard'] [class*='w-px'],
+    [data-component-id='MarketingStrategyCard'] [class*='w-px'],
+    [data-component-id='BrandDevelopmentCard'] [class*='w-px'] {
+      width: 100% !important;
+      flex-basis: auto !important;
+    }
+
+    [data-component-id='ExpertiseSection'] > div:nth-child(2) {
+      position: relative !important;
+      top: auto !important;
+      min-height: 460px !important;
+    }
+
+    [data-component-id='AboutMetrics'],
+    [data-component-id='TestimonialsHeader'],
+    [data-component-id='Footer'] {
+      gap: 56px !important;
+    }
+
+    [data-component-id='FeaturedProjectsRowOne'],
+    [data-component-id='FeaturedProjectsRowTwo'],
+    [data-component-id='FooterMeta'] {
+      flex-direction: column !important;
+      align-items: stretch !important;
+      gap: 32px !important;
+    }
+
+    [data-component-id$='ProjectCard'] {
+      width: 100% !important;
+      flex-basis: auto !important;
+    }
+
+    [data-component-id$='ProjectCard'] a {
+      height: auto !important;
+      min-height: 420px !important;
+    }
+
+    [data-component-id='DigitalCampaignsCard'] > div:nth-child(2),
+    [data-component-id='GrowthStrategyCard'] > div:nth-child(2),
+    [data-component-id='BrandConsultingCard'] > div:nth-child(2),
+    [data-component-id='MarketingStrategyCard'] > div:nth-child(2),
+    [data-component-id='BrandDevelopmentCard'] > div:nth-child(2) {
+      flex-direction: column !important;
+      align-items: flex-start !important;
+      gap: 24px !important;
+    }
+
+    [data-component-id='DigitalCampaignsCard'] h2,
+    [data-component-id='GrowthStrategyCard'] h2,
+    [data-component-id='BrandConsultingCard'] h2,
+    [data-component-id='MarketingStrategyCard'] h2,
+    [data-component-id='BrandDevelopmentCard'] h2 {
+      font-size: 42px !important;
+      line-height: 1.08 !important;
+      letter-spacing: 0 !important;
+    }
+
+    [data-component-id='FloatingWorkLink'] {
+      width: 64px !important;
+    }
+
+    [data-component-id='FloatingAboutLink'] {
+      width: 58px !important;
+    }
+
+    [data-component-id='FloatingBlogLink'] {
+      width: 54px !important;
+    }
+
+    [data-component-id='FloatingContactLink'] {
+      width: 120px !important;
+    }
+
+    [data-component-id='FloatingWorkLink'] p,
+    [data-component-id='FloatingAboutLink'] p,
+    [data-component-id='FloatingBlogLink'] p,
+    [data-component-id='FloatingContactLink'] p {
+      font-size: 13px !important;
+    }
+  }
+}
