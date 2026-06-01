@@ -16,7 +16,7 @@ function DiscoveryStepCard() {
         </div>
         <div className="[--framer-paragraph-spacing:0px] [transform:none] opacity-100 [white-space-collapse:preserve] [text-wrap-mode:wrap] [word-break:break-word] w-full relative flex flex-col shrink-0 justify-start outline-[3px]">
           <p className='text-[#050814] leading-[32.4px] [font-family:Geist,"Geist_Placeholder",sans-serif,system-ui,sans-serif] text-[18px] tracking-[-0.36px] [word-break:break-word] caret-[#050814] my-0'>
-            Começamos entendendo objetivos, contexto e desafios para criar um plano claro, acionável e sob medida para a sua marca.
+            Entendemos o negócio, o público e o objetivo antes de definir qualquer solução.
           </p>
         </div>
       </div>

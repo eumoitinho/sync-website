@@ -17,7 +17,7 @@ function FooterCallToAction() {
         <FooterHeadline />
         <div className="[--extracted-r6o4lv:var(--token-1ba3eb5c-3d1d-417e-a110-baadc5d93e3d,rgb(255,255,255))] [--framer-paragraph-spacing:0px] [transform:none] opacity-100 [white-space-collapse:preserve] [text-wrap-mode:wrap] [word-break:break-word] w-full max-w-[720px] relative flex flex-col shrink-0 justify-start outline-[3px]">
           <p className='[--framer-text-color:var(--extracted-r6o4lv,var(--token-1ba3eb5c-3d1d-417e-a110-baadc5d93e3d,rgb(255,255,255)))] text-white leading-[32.4px] [font-family:Geist,"Geist_Placeholder",sans-serif,system-ui,sans-serif] font-medium text-[18px] tracking-[-0.36px] [word-break:break-word] caret-white my-0'>
-            Deixe a Sync ser sua parceira para gerar resultados consistentes. Seja para atrair leads, aumentar conversões ou fortalecer sua marca, estamos prontos para ajudar.
+            Em uma conversa rápida, avaliamos seu site ou campanha e apontamos melhorias práticas para o próximo passo.
           </p>
         </div>
         <FooterContactButton />

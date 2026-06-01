@@ -1,0 +1,1886 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sync · Apresentação Comercial</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700;800&amp;family=Geist+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #f6f4ef;
+    --ink: #050814;
+    --accent: #1440fc;
+    --muted: rgba(5, 8, 20, 0.6);
+    --hairline: rgba(5, 8, 20, 0.12);
+    --hairline-strong: rgba(5, 8, 20, 0.25);
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: 'Geist', sans-serif, system-ui;
+    font-size: 13px;
+    line-height: 1.5;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  ::selection { background: var(--accent); color: #fff; }
+
+  a { color: inherit; text-decoration: none; }
+
+  .wrap { max-width: 1440px; margin: 0 auto; padding: 0 40px; }
+
+  /* ===== HEADER ===== */
+  header.nav {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: rgba(246, 244, 239, 0.84);
+    backdrop-filter: blur(18px);
+    border-bottom: 1px solid var(--hairline);
+  }
+  header.nav .inner {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 18px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .logo {
+    display: block;
+    align-items: center;
+    width: 132px;
+    height: 48px;
+    color: var(--accent);
+  }
+  .logo img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: contain;
+  }
+  .nav-links {
+    display: flex;
+    gap: 28px;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+  }
+  .nav-cta {
+    background: var(--ink);
+    color: #fff;
+    padding: 9px 16px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    transition: background 0.2s ease, transform 0.2s ease;
+  }
+  .nav-cta:hover { background: var(--accent); transform: translateY(-1px); }
+
+  /* ===== EYEBROW ===== */
+  .eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 500;
+    font-size: 11px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--ink);
+  }
+  .eyebrow::before {
+    content: "";
+    width: 8px;
+    height: 8px;
+    background: var(--accent);
+    border-radius: 50%;
+  }
+
+  /* ===== SECTION TITLE ===== */
+  .section-title {
+    font-size: clamp(56px, 7vw, 96px);
+    line-height: 0.95;
+    letter-spacing: -0.04em;
+    font-weight: 500;
+  }
+  .section-title em {
+    font-style: normal;
+    color: var(--accent);
+  }
+
+  /* ===== HERO ===== */
+  .hero {
+    padding: 180px 40px 80px;
+    max-width: 1440px;
+    margin: 0 auto;
+    position: relative;
+    isolation: isolate;
+  }
+  .hero::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: -72px;
+    right: -40px;
+    width: min(62vw, 800px);
+    aspect-ratio: 1.58155 / 1;
+    background: url("https://framerusercontent.com/images/t7UIgISfch06jfGgWhPJEE4a1s.jpg") center / cover no-repeat;
+    opacity: 0.55;
+    mix-blend-mode: multiply;
+    pointer-events: none;
+  }
+  .hero h1 {
+    font-size: clamp(80px, 12vw, 180px);
+    line-height: 0.88;
+    letter-spacing: -0.05em;
+    font-weight: 500;
+    max-width: 1200px;
+  }
+  .hero h1 .blue-dot {
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    background: var(--accent);
+    border-radius: 50%;
+    margin: 0 8px 0 4px;
+    vertical-align: middle;
+    transform: translateY(-12px);
+  }
+  .proposal-meta {
+    margin-bottom: 32px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .proposal-meta span {
+    border: 1px solid var(--hairline-strong);
+    border-radius: 999px;
+    padding: 7px 12px;
+    color: var(--muted);
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+  .hero-bottom {
+    margin-top: 64px;
+    display: grid;
+    grid-template-columns: 1fr 460px;
+    gap: 64px;
+    align-items: end;
+  }
+  .hero-intro {
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--muted);
+  }
+  .hero-actions {
+    display: flex;
+    gap: 12px;
+    justify-self: end;
+  }
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 14px 22px;
+    border-radius: 999px;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    transition: opacity 0.2s;
+  }
+  .btn-primary { background: var(--ink); color: #fff; }
+  .btn-secondary { background: transparent; color: var(--ink); border: 1px solid var(--hairline-strong); }
+  .btn:hover { opacity: 0.85; }
+
+  .hero-image {
+    margin-top: 96px;
+    aspect-ratio: 1.7 / 1;
+    border-radius: 16px;
+    overflow: hidden;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+    position: relative;
+  }
+  .hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  /* ===== ABOUT ===== */
+  .about {
+    padding: 160px 40px;
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+  .about-grid {
+    display: grid;
+    grid-template-columns: 30% 1fr;
+    gap: 60px;
+    align-items: end;
+  }
+  .about-side {
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .about-media {
+    margin-top: 64px;
+    font-size: 12px;
+    color: var(--muted);
+    line-height: 1.6;
+  }
+  .about-statement {
+    font-size: clamp(34px, 4vw, 56px);
+    line-height: 1.15;
+    letter-spacing: -0.025em;
+    font-weight: 400;
+    margin-bottom: 96px;
+  }
+  .about-statement strong {
+    font-weight: 500;
+    color: var(--ink);
+  }
+  .about-metrics {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+  .metric {
+    border-top: 1px solid var(--hairline);
+    padding-top: 24px;
+  }
+  .metric .v {
+    font-size: clamp(64px, 7vw, 96px);
+    line-height: 0.9;
+    letter-spacing: -0.04em;
+    font-weight: 500;
+  }
+  .metric .v .ac { color: var(--accent); }
+  .metric .k {
+    margin-top: 16px;
+    font-size: 12px;
+    color: var(--muted);
+    letter-spacing: 0.02em;
+  }
+
+  /* ===== MARQUEE ===== */
+  .marquee {
+    overflow: hidden;
+    border-top: 1px solid var(--hairline);
+    border-bottom: 1px solid var(--hairline);
+    padding: 32px 0;
+    background: var(--bg);
+  }
+  .marquee-track {
+    display: flex;
+    gap: 80px;
+    animation: marquee 40s linear infinite;
+    white-space: nowrap;
+    width: max-content;
+  }
+  .marquee-track span {
+    font-size: clamp(64px, 8vw, 120px);
+    line-height: 1;
+    letter-spacing: -0.04em;
+    font-weight: 500;
+    color: var(--ink);
+  }
+  .marquee-track span em {
+    font-style: normal;
+    color: var(--accent);
+  }
+  @keyframes marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+
+  /* ===== PROJECTS ===== */
+  .projects {
+    padding: 120px 40px 160px;
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+  }
+  .project-card {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+  .project-card .img {
+    aspect-ratio: 4 / 3;
+    border-radius: 12px;
+    overflow: hidden;
+    background: linear-gradient(135deg, #ddd, #999);
+    position: relative;
+  }
+  .project-card .img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s;
+  }
+  .project-card:hover .img img {
+    transform: scale(1.04);
+  }
+  .project-card .tag {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+  .project-card .name {
+    font-size: 24px;
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+    font-weight: 500;
+  }
+  .project-card .impact {
+    font-size: 13px;
+    color: var(--muted);
+    line-height: 1.55;
+    max-width: 380px;
+  }
+
+  /* row 2 */
+  .projects-row-two {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 28px;
+  }
+  .projects-row-two .project-card .img {
+    aspect-ratio: 1 / 1;
+  }
+  .projects-row-two .project-card .name {
+    font-size: 18px;
+  }
+
+  /* ===== CASES (NEW SECTION) ===== */
+  .cases {
+    background: var(--ink);
+    color: #fff;
+    padding: 160px 0;
+    position: relative;
+    overflow: hidden;
+  }
+  .cases::before {
+    content: "";
+    position: absolute;
+    top: -200px;
+    left: -200px;
+    width: 800px;
+    height: 800px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(20,64,252,0.25), transparent 60%);
+    pointer-events: none;
+  }
+  .cases::after {
+    content: "";
+    position: absolute;
+    bottom: -300px;
+    right: -200px;
+    width: 800px;
+    height: 800px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(20,64,252,0.18), transparent 60%);
+    pointer-events: none;
+  }
+  .cases .wrap { position: relative; z-index: 2; }
+  .cases .eyebrow { color: #fff; }
+  .cases-head {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 80px;
+    align-items: end;
+    margin-bottom: 80px;
+  }
+  .cases-head h2 {
+    font-size: clamp(56px, 7vw, 96px);
+    line-height: 0.95;
+    letter-spacing: -0.04em;
+    font-weight: 500;
+    color: #fff;
+  }
+  .cases-head h2 em { font-style: normal; color: var(--accent); }
+  .cases-head .body {
+    font-size: 15px;
+    line-height: 1.6;
+    color: rgba(255,255,255,0.7);
+    max-width: 460px;
+  }
+
+  /* logos band */
+  .logos-band {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 32px;
+    padding: 48px 0;
+    margin-bottom: 80px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    align-items: center;
+  }
+  .logo-tile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 56px;
+    opacity: 0.85;
+    transition: opacity 0.3s;
+  }
+  .logo-tile:hover { opacity: 1; }
+  .logo-tile svg { max-height: 28px; width: auto; }
+  .logo-tile img { max-height: 40px; width: auto; max-width: 140px; object-fit: contain; }
+  .logo-tile .text-logo {
+    font-size: 22px;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    color: rgba(255,255,255,0.9);
+  }
+  .logo-tile .text-logo em {
+    font-style: normal;
+    color: var(--accent);
+  }
+
+  /* cases grid */
+  .cases-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+  .case {
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 12px;
+    background: rgba(255,255,255,0.02);
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    position: relative;
+    overflow: hidden;
+  }
+  .case-thumb {
+    position: relative;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    background: #0b0e1a;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+  }
+  .case-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    filter: brightness(0.85) contrast(1.05);
+    transition: transform 0.6s ease, filter 0.4s ease;
+  }
+  .case:hover .case-thumb img {
+    transform: scale(1.04);
+    filter: brightness(1) contrast(1);
+  }
+  .case-thumb::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+      linear-gradient(180deg, transparent 40%, rgba(5,8,20,0.7) 100%),
+      radial-gradient(circle at 75% 20%, rgba(20,64,252,0.15), transparent 60%);
+    pointer-events: none;
+  }
+  .case-thumb .url-pill {
+    position: absolute;
+    bottom: 16px;
+    left: 16px;
+    z-index: 2;
+    background: rgba(5,8,20,0.7);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255,255,255,0.1);
+    padding: 6px 12px;
+    border-radius: 999px;
+    font-size: 10.5px;
+    letter-spacing: 0.04em;
+    color: rgba(255,255,255,0.85);
+    font-family: 'Geist Mono', monospace;
+  }
+  .case-content {
+    padding: 32px 40px 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .case::after {
+    content: "";
+    position: absolute;
+    top: 40%;
+    right: -100px;
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(20,64,252,0.12), transparent 65%);
+    pointer-events: none;
+    z-index: 0;
+  }
+  .case-tag {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    font-size: 11px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.5);
+  }
+  .case-tag .num { color: var(--accent); font-weight: 500; }
+  .case-name {
+    font-size: 44px;
+    line-height: 1;
+    letter-spacing: -0.025em;
+    font-weight: 500;
+    color: #fff;
+  }
+  .case-sub {
+    font-size: 13px;
+    color: rgba(255,255,255,0.55);
+    margin-top: -16px;
+  }
+  .case-body {
+    font-size: 13.5px;
+    line-height: 1.6;
+    color: rgba(255,255,255,0.75);
+    max-width: 480px;
+  }
+  .case-metrics {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    padding-top: 24px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    position: relative;
+    z-index: 1;
+  }
+  .case-metrics .v {
+    font-size: 36px;
+    line-height: 1;
+    letter-spacing: -0.025em;
+    font-weight: 500;
+    color: #fff;
+  }
+  .case-metrics .v em {
+    font-style: normal;
+    color: var(--accent);
+  }
+  .case-metrics .k {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: rgba(255,255,255,0.5);
+    margin-top: 10px;
+    line-height: 1.4;
+  }
+  .case-stack {
+    font-size: 11px;
+    color: rgba(255,255,255,0.45);
+    letter-spacing: 0.02em;
+  }
+  .case-stack strong { color: rgba(255,255,255,0.7); font-weight: 500; }
+  .case.strategy-card .case-thumb { aspect-ratio: 16 / 7; }
+  .case.strategy-card .case-content { min-height: 360px; }
+
+  /* aggregate stats above grid */
+  .aggregates {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 32px;
+    padding: 48px 0 80px;
+  }
+  .agg .v {
+    font-size: clamp(48px, 5vw, 72px);
+    line-height: 0.95;
+    letter-spacing: -0.035em;
+    font-weight: 500;
+    color: #fff;
+  }
+  .agg .v em {
+    font-style: normal;
+    color: var(--accent);
+  }
+  .agg .k {
+    margin-top: 12px;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    color: rgba(255,255,255,0.5);
+    line-height: 1.5;
+  }
+
+  /* ===== SERVICES ===== */
+  .services {
+    padding: 160px 40px 120px;
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+  .services-head {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: end;
+    margin-bottom: 80px;
+  }
+  .services-head h2 em { font-style: normal; color: var(--accent); }
+  .services-head .body {
+    font-size: 15px;
+    line-height: 1.6;
+    color: var(--muted);
+    max-width: 440px;
+  }
+  .service {
+    border-top: 1px solid var(--hairline);
+    padding: 56px 0;
+    display: grid;
+    grid-template-columns: 120px 1fr 1fr;
+    gap: 60px;
+    align-items: start;
+  }
+  .service:last-child {
+    border-bottom: 1px solid var(--hairline);
+  }
+  .service .idx {
+    font-size: 13px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--accent);
+    font-weight: 500;
+  }
+  .service h3 {
+    font-size: clamp(32px, 3.5vw, 48px);
+    line-height: 1;
+    letter-spacing: -0.025em;
+    font-weight: 500;
+  }
+  .service .desc {
+    font-size: 14px;
+    line-height: 1.65;
+    color: var(--muted);
+  }
+  .service .desc p { margin-bottom: 16px; }
+  .service .stack {
+    margin-top: 24px;
+    padding-top: 16px;
+    border-top: 1px solid var(--hairline);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+  .service .stack .tag {
+    font-size: 10.5px;
+    letter-spacing: 0.04em;
+    padding: 5px 10px;
+    border: 1px solid var(--hairline-strong);
+    border-radius: 999px;
+    color: var(--ink);
+  }
+  .service .method-steps {
+    margin-top: 24px;
+    display: grid;
+    gap: 12px;
+  }
+  .method-steps .step {
+    display: grid;
+    grid-template-columns: 24px 1fr;
+    gap: 12px;
+    font-size: 13px;
+    color: var(--ink);
+  }
+  .method-steps .step .step-num {
+    font-weight: 500;
+    color: var(--accent);
+  }
+  .method-steps .step .step-body strong {
+    font-weight: 500;
+  }
+  .method-steps .step .step-body span {
+    display: block;
+    color: var(--muted);
+    margin-top: 2px;
+    font-size: 12.5px;
+  }
+
+  /* ===== PROCESS ===== */
+  .process {
+    padding: 160px 40px 120px;
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+  .process-grid {
+    display: grid;
+    grid-template-columns: 30% 1fr;
+    gap: 60px;
+    align-items: start;
+  }
+  .process-content h2 {
+    font-size: clamp(48px, 6vw, 80px);
+    line-height: 0.95;
+    letter-spacing: -0.035em;
+    font-weight: 500;
+    margin-bottom: 80px;
+    max-width: 800px;
+  }
+  .process-content h2 em { font-style: normal; color: var(--accent); }
+  .process-steps {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 60px 48px;
+  }
+  .process-step .pn {
+    font-size: 56px;
+    line-height: 1;
+    letter-spacing: -0.03em;
+    font-weight: 500;
+    color: var(--accent);
+  }
+  .process-step h4 {
+    margin-top: 16px;
+    font-size: 22px;
+    letter-spacing: -0.015em;
+    font-weight: 500;
+  }
+  .process-step p {
+    margin-top: 12px;
+    font-size: 13.5px;
+    color: var(--muted);
+    line-height: 1.6;
+  }
+
+  /* ===== EXPERTISE ===== */
+  .expertise {
+    padding: 120px 40px 80px;
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+  .expertise-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: start;
+  }
+  .expertise-content h2 {
+    font-size: clamp(40px, 4.5vw, 64px);
+    line-height: 1;
+    letter-spacing: -0.03em;
+    font-weight: 500;
+    margin-top: 24px;
+  }
+  .expertise-content h2 em { font-style: normal; color: var(--accent); }
+  .expertise-content p {
+    margin-top: 24px;
+    font-size: 15px;
+    color: var(--muted);
+    line-height: 1.6;
+    max-width: 480px;
+  }
+  .markets {
+    margin-top: 56px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  .markets .item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 0;
+    border-top: 1px solid var(--hairline);
+    font-size: 18px;
+    letter-spacing: -0.01em;
+  }
+  .markets .item:last-child { border-bottom: 1px solid var(--hairline); }
+  .markets .item .num {
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    color: var(--muted);
+  }
+
+  /* ===== TESTIMONIAL ===== */
+  .testimonial {
+    padding: 160px 40px;
+    max-width: 1440px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .testimonial h3 {
+    font-size: clamp(48px, 5.5vw, 80px);
+    line-height: 1.05;
+    letter-spacing: -0.035em;
+    font-weight: 500;
+    margin: 32px 0 48px;
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .testimonial h3 em { font-style: normal; color: var(--accent); }
+  .clients-strip {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 32px;
+    padding: 48px 0;
+    border-top: 1px solid var(--hairline);
+    border-bottom: 1px solid var(--hairline);
+    max-width: 1100px;
+    margin: 0 auto 80px;
+  }
+  .clients-strip .client {
+    font-size: 22px;
+    letter-spacing: -0.015em;
+    font-weight: 500;
+    text-align: center;
+  }
+  .quote {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+    padding: 48px;
+    border-radius: 12px;
+    background: #fff;
+    border: 1px solid var(--hairline);
+  }
+  .quote p {
+    font-size: 22px;
+    line-height: 1.5;
+    letter-spacing: -0.015em;
+    font-weight: 400;
+  }
+  .quote .who {
+    margin-top: 32px;
+    padding-top: 24px;
+    border-top: 1px solid var(--hairline);
+    font-size: 12px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  /* ===== RELATOR DIGITAL ===== */
+  .relator {
+    background: var(--ink);
+    color: #fff;
+    padding: 160px 0;
+    position: relative;
+    overflow: hidden;
+  }
+  .relator::before {
+    content: "";
+    position: absolute;
+    top: -200px;
+    right: -200px;
+    width: 900px;
+    height: 900px;
+    border-radius: 50%;
+    background: radial-gradient(circle at 30% 30%, rgba(20,64,252,0.4), rgba(20,64,252,0.1) 50%, transparent 70%);
+    pointer-events: none;
+  }
+  .relator .wrap { position: relative; z-index: 2; }
+  .relator .eyebrow { color: #fff; }
+  .relator-head {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 80px;
+    align-items: end;
+    margin-bottom: 80px;
+  }
+  .relator-head h2 {
+    font-size: clamp(56px, 7.5vw, 112px);
+    line-height: 0.92;
+    letter-spacing: -0.045em;
+    font-weight: 500;
+    color: #fff;
+    margin-top: 32px;
+  }
+  .relator-head h2 em { font-style: normal; color: var(--accent); }
+  .relator-head .body {
+    font-size: 15px;
+    line-height: 1.65;
+    color: rgba(255,255,255,0.7);
+    max-width: 460px;
+  }
+  .relator-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.1fr;
+    gap: 64px;
+    align-items: stretch;
+  }
+  .relator-features {
+    display: grid;
+    gap: 1px;
+    background: rgba(255,255,255,0.08);
+    border-top: 1px solid rgba(255,255,255,0.08);
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+  }
+  .relator-feature {
+    background: var(--ink);
+    padding: 24px 0;
+    display: grid;
+    grid-template-columns: 48px 1fr;
+    gap: 16px;
+  }
+  .relator-feature .n {
+    font-size: 12px;
+    letter-spacing: 0.1em;
+    color: var(--accent);
+    font-weight: 500;
+  }
+  .relator-feature h5 {
+    font-size: 20px;
+    letter-spacing: -0.015em;
+    font-weight: 500;
+    color: #fff;
+  }
+  .relator-feature p {
+    font-size: 13px;
+    line-height: 1.55;
+    color: rgba(255,255,255,0.6);
+    margin-top: 6px;
+  }
+
+  /* Dashboard mockup */
+  .dash {
+    background: #0b0e1a;
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 12px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    position: relative;
+    overflow: hidden;
+  }
+  .dash-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.45);
+    padding-bottom: 16px;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+  }
+  .dash-bar .lights { display: flex; gap: 4px; }
+  .dash-bar .lights span {
+    width: 8px; height: 8px; border-radius: 50%;
+    background: rgba(255,255,255,0.12);
+  }
+  .dash-bar .lights span.on { background: var(--accent); }
+  .dash-kpis {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
+  .dash-kpi {
+    border: 1px solid rgba(255,255,255,0.07);
+    border-radius: 8px;
+    padding: 14px;
+  }
+  .dash-kpi .k {
+    font-size: 9px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.4);
+  }
+  .dash-kpi .v {
+    font-size: 28px;
+    letter-spacing: -0.025em;
+    font-weight: 500;
+    margin-top: 6px;
+    color: #fff;
+  }
+  .dash-kpi .delta {
+    font-size: 10px;
+    color: #4ade80;
+    margin-top: 6px;
+    font-weight: 500;
+  }
+  .dash-kpi .delta.dn { color: #f87171; }
+  .dash-chart {
+    background: rgba(255,255,255,0.02);
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 8px;
+    padding: 16px;
+  }
+  .dash-chart .h {
+    display: flex; justify-content: space-between; align-items: center;
+    margin-bottom: 8px;
+  }
+  .dash-chart .h .ttl { font-size: 14px; font-weight: 500; }
+  .dash-chart .h .legend {
+    display: flex; gap: 10px;
+    font-size: 9px; letter-spacing: 0.1em; text-transform: uppercase;
+    color: rgba(255,255,255,0.45);
+  }
+  .dash-chart .legend span { display: flex; align-items: center; gap: 5px; }
+  .dash-chart .legend span::before {
+    content: ""; width: 8px; height: 2px; background: var(--accent);
+  }
+  .dash-chart .legend span.alt::before { background: rgba(255,255,255,0.4); }
+  .dash-chart svg { width: 100%; height: 100px; display: block; }
+  .dash-table {
+    background: rgba(255,255,255,0.02);
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 8px;
+    padding: 12px 14px;
+  }
+  .dash-table .row {
+    display: grid;
+    grid-template-columns: 1fr 80px 80px 60px;
+    gap: 8px;
+    padding: 6px 0;
+    font-size: 11px;
+    color: rgba(255,255,255,0.75);
+    align-items: center;
+  }
+  .dash-table .row.head {
+    color: rgba(255,255,255,0.4);
+    text-transform: uppercase;
+    font-size: 9px;
+    letter-spacing: 0.1em;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+    padding-bottom: 6px;
+    margin-bottom: 4px;
+  }
+  .dash-table .row .ch { color: #4ade80; }
+  .dash-table .row .ch.dn { color: #f87171; }
+  .investment-table .row {
+    grid-template-columns: 1fr 90px 150px 130px;
+    gap: 14px;
+  }
+  .investment-table .row:not(.head) {
+    padding: 12px 0;
+    font-size: 12px;
+  }
+  .investment-table .row strong {
+    color: #fff;
+    font-weight: 500;
+  }
+  .price-note {
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 8px;
+    padding: 16px;
+    color: rgba(255,255,255,0.62);
+    font-size: 12px;
+    line-height: 1.6;
+  }
+
+  /* ===== BLOG ===== */
+  .blog {
+    padding: 120px 40px 140px;
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+  .blog-head {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: end;
+    margin-bottom: 64px;
+  }
+  .blog-head h2 em { font-style: normal; color: var(--accent); }
+  .blog-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+  .post {
+    border: 1px solid var(--hairline);
+    border-radius: 12px;
+    padding: 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    background: #fff;
+    transition: transform 0.3s, border-color 0.3s;
+  }
+  .post:hover { transform: translateY(-4px); border-color: var(--hairline-strong); }
+  .post .cat {
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--accent);
+    font-weight: 500;
+  }
+  .post .ttl {
+    font-size: 20px;
+    line-height: 1.2;
+    letter-spacing: -0.015em;
+    font-weight: 500;
+    margin-top: auto;
+  }
+  .post .meta {
+    font-size: 12px;
+    color: var(--muted);
+  }
+
+  /* ===== FOOTER ===== */
+  footer {
+    background: #050814;
+    color: #fff;
+    padding: 120px 40px 32px;
+  }
+  footer .inner {
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+  .footer-brand {
+    width: 132px;
+    height: 48px;
+    margin-bottom: 40px;
+  }
+  .footer-brand img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+  }
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 80px;
+    margin-bottom: 80px;
+    align-items: end;
+  }
+  .footer-grid h2 {
+    font-size: clamp(56px, 7vw, 96px);
+    line-height: 0.95;
+    letter-spacing: -0.04em;
+    font-weight: 500;
+  }
+  .footer-grid h2 em { font-style: normal; color: var(--accent); }
+  .footer-grid p {
+    font-size: 15px;
+    line-height: 1.6;
+    color: rgba(255,255,255,0.6);
+    margin: 24px 0 32px;
+    max-width: 460px;
+  }
+  .footer-grid .btn-primary {
+    background: var(--accent);
+    color: #fff;
+  }
+  .footer-bottom {
+    padding-top: 32px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 32px;
+    font-size: 12px;
+    color: rgba(255,255,255,0.5);
+    align-items: end;
+  }
+  .footer-bottom .links {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+  }
+  .footer-bottom .links a:hover { color: #fff; }
+  .footer-bottom .social a:hover { color: var(--accent); }
+
+  /* ===== RESPONSIVE (basic) ===== */
+  @media (max-width: 900px) {
+    .hero-bottom,
+    .about-grid,
+    .cases-head,
+    .services-head,
+    .process-grid,
+    .expertise-grid,
+    .blog-head,
+    .relator-head,
+    .relator-grid,
+    .footer-grid { grid-template-columns: 1fr; gap: 32px; }
+    .about-metrics, .projects-grid, .projects-row-two,
+    .cases-grid, .clients-strip, .blog-grid,
+    .process-steps, .logos-band { grid-template-columns: repeat(2, 1fr); }
+    .aggregates { grid-template-columns: repeat(2, 1fr); }
+    .service { grid-template-columns: 1fr; gap: 24px; }
+    .investment-table .row { grid-template-columns: 1fr; }
+    .nav-links { display: none; }
+    .hero { padding: 100px 24px 60px; }
+    .wrap, .about, .projects, .services, .process,
+    .expertise, .testimonial, .blog { padding-left: 24px; padding-right: 24px; }
+  }
+  @media print {
+    body { background: #fff; }
+    .nav, .nav-cta { box-shadow: none; }
+    .marquee-track { animation: none; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ============== HEADER ============== -->
+<header class="nav">
+  <div class="inner">
+    <a href="#" class="logo" aria-label="Sync">
+      <img src="public/logo/svg/sy-logo-color.svg" alt="Sync">
+    </a>
+    <nav class="nav-links">
+      <a href="#cenario">Cenário</a>
+      <a href="#objetivos">Objetivos</a>
+      <a href="#estrategia">Estratégia</a>
+      <a href="#cronograma">Cronograma</a>
+      <a href="#investimento">Investimento</a>
+    </nav>
+    <a href="#contato" class="nav-cta">Aprovar proposta</a>
+  </div>
+</header>
+
+<!-- ============== HERO ============== -->
+<section class="hero">
+  <div class="proposal-meta">
+    <span>MSYNC · Proposta comercial</span>
+    <span>Maio de 2026</span>
+    <span>Okeanos Hamburgueria · Ilhabela, SP</span>
+  </div>
+  <h1>Presença online<br>e crescimento <span style="color: var(--accent);">orgânico</span><span class="blue-dot"></span></h1>
+
+  <div class="hero-bottom">
+    <p class="hero-intro">Uma proposta enxuta para fortalecer a presença digital do Okeanos no momento em que o cliente decide onde comer: Google, TripAdvisor, Instagram, TikTok, avaliações e conteúdo gerado pela própria experiência da casa.</p>
+    <div class="hero-actions">
+      <a href="#investimento" class="btn btn-primary">Ver investimento</a>
+      <a href="#cronograma" class="btn btn-secondary">Ver fases</a>
+    </div>
+  </div>
+
+  <div class="hero-image">
+    <img src="https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&amp;fit=crop&amp;w=1800&amp;q=80" alt="Hamburguer artesanal servido em restaurante">
+  </div>
+</section>
+
+<!-- ============== ABOUT ============== -->
+<section class="about" id="cenario">
+  <div class="about-grid">
+    <div class="about-side">
+      <div class="eyebrow">O cenário</div>
+      <div class="about-media">
+        <strong style="color: var(--ink); display:block; margin-bottom:8px; font-weight:500;">Ilhabela muda o jogo</strong>
+        Cidade turística, alta disputa por atenção e decisão de compra acontecendo em tempo real.
+      </div>
+    </div>
+    <div>
+      <p class="about-statement">
+        Ilhabela é uma cidade turística e isso muda tudo. A demanda existe, mas a disputa por atenção entre restaurantes é alta, principalmente nos picos de temporada. Quem aparece primeiro no Google, tem mais avaliação boa e mantém presença constante nas redes fica mais perto do cliente que está decidindo <strong>onde comer naquele momento</strong>.
+      </p>
+      <div class="about-metrics">
+        <div class="metric">
+          <div class="v">01</div>
+          <div class="k">Google Business Profile completo, vivo e otimizado</div>
+        </div>
+        <div class="metric">
+          <div class="v">02</div>
+          <div class="k">TripAdvisor com reputação ativa e mais avaliações positivas</div>
+        </div>
+        <div class="metric">
+          <div class="v">03</div>
+          <div class="k">Instagram e TikTok orgânicos usando o movimento real da casa</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== MARQUEE ============== -->
+<div class="marquee">
+  <div class="marquee-track">
+    <span>Google</span><span><em>·</em></span><span>TripAdvisor</span><span><em>·</em></span>
+    <span>Instagram</span><span><em>·</em></span><span>TikTok</span><span><em>·</em></span>
+    <span>UGC</span><span><em>·</em></span><span>Avaliações</span><span><em>·</em></span>
+    <span>Google</span><span><em>·</em></span><span>TripAdvisor</span><span><em>·</em></span>
+  </div>
+</div>
+
+<!-- ============== PROJECTS ============== -->
+<section class="projects" id="objetivos">
+  <div style="margin-bottom: 64px; display:flex; align-items:end; justify-content:space-between; gap:60px;">
+    <div>
+      <div class="eyebrow" style="margin-bottom:24px;">O que queremos alcançar</div>
+      <h2 class="section-title">Presença que trabalha<br><em>o ano inteiro.</em></h2>
+    </div>
+    <p style="max-width:380px; font-size:15px; line-height:1.6; color: var(--muted);">
+      A proposta não é queimar verba em anúncio. É construir uma base que se sustenta com o tempo: perfis bem cuidados, reputação forte e conteúdo recorrente.
+    </p>
+  </div>
+
+  <div class="projects-grid">
+    <div class="project-card">
+      <div class="img">
+        <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&amp;fit=crop&amp;w=1200&amp;q=80" alt="Restaurante preparado para receber clientes">
+      </div>
+      <span class="tag">Google Business Profile</span>
+      <div class="name">Aparecer melhor quando a fome bater.</div>
+      <p class="impact">Ficha completa, categorias corretas, fotos atualizadas, horários, posts e respostas às avaliações para ganhar relevância na busca local.</p>
+    </div>
+    <div class="project-card">
+      <div class="img">
+        <img src="https://images.unsplash.com/photo-1544145945-f90425340c7e?auto=format&amp;fit=crop&amp;w=1200&amp;q=80" alt="Clientes em mesa de restaurante">
+      </div>
+      <span class="tag">TripAdvisor · Reputação</span>
+      <div class="name">Transformar experiência boa em prova social.</div>
+      <p class="impact">Gestão ativa do perfil, fluxo de incentivo a avaliações positivas e rotina de resposta para aumentar confiança antes da visita.</p>
+    </div>
+    <div class="project-card">
+      <div class="img">
+        <img src="https://images.unsplash.com/photo-1551782450-a2132b4ba21d?auto=format&amp;fit=crop&amp;w=1200&amp;q=80" alt="Hamburguer em close para conteúdo digital">
+      </div>
+      <span class="tag">Instagram · TikTok · UGC</span>
+      <div class="name">Gerar movimento sem depender de mídia paga.</div>
+      <p class="impact">Conteúdo orgânico recorrente usando bastidores, pratos, ambiente, clientes e campanhas de engajamento desenhadas caso a caso.</p>
+    </div>
+  </div>
+
+  <div class="projects-row-two">
+    <div class="project-card">
+      <div class="img">
+        <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&amp;fit=crop&amp;w=900&amp;q=80" alt="Restaurante com mesas ocupadas">
+      </div>
+      <span class="tag">Base digital</span>
+      <div class="name">Perfis completos e organizados</div>
+    </div>
+    <div class="project-card">
+      <div class="img">
+        <img src="https://images.unsplash.com/photo-1528605248644-14dd04022da1?auto=format&amp;fit=crop&amp;w=900&amp;q=80" alt="Pessoas brindando em restaurante">
+      </div>
+      <span class="tag">Prova social</span>
+      <div class="name">Mais avaliações e recomendações</div>
+    </div>
+    <div class="project-card">
+      <div class="img">
+        <img src="https://images.unsplash.com/photo-1498837167922-ddd27525d352?auto=format&amp;fit=crop&amp;w=900&amp;q=80" alt="Mesa com alimentos para produção de conteúdo">
+      </div>
+      <span class="tag">Conteúdo</span>
+      <div class="name">Rotina editorial sem improviso</div>
+    </div>
+    <div class="project-card">
+      <div class="img">
+        <img src="https://images.unsplash.com/photo-1504754524776-8f4f37790ca0?auto=format&amp;fit=crop&amp;w=900&amp;q=80" alt="Prato fotografado para redes sociais">
+      </div>
+      <span class="tag">Engajamento</span>
+      <div class="name">Clientes marcando o Okeanos</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== STRATEGY — DARK SECTION ============== -->
+<section class="cases" id="estrategia">
+  <div class="wrap">
+    <div class="cases-head">
+      <div>
+        <div class="eyebrow">Como a gente chega lá</div>
+        <h2 style="margin-top:24px;">Orgânico não é sorte.<br>É rotina, perfil vivo<br>e <em>cliente falando.</em></h2>
+      </div>
+      <p class="body">A estratégia trabalha em três frentes que se reforçam: otimização contínua dos perfis, produção de conteúdo recorrente e campanhas de engajamento que colocam o próprio cliente da casa para criar conteúdo e divulgar espontaneamente.</p>
+    </div>
+
+    <!-- Channels band -->
+    <div class="logos-band">
+      <div class="logo-tile"><div class="text-logo">Google <em>Profile</em></div></div>
+      <div class="logo-tile"><div class="text-logo">Trip<em>Advisor</em></div></div>
+      <div class="logo-tile"><div class="text-logo">Instagram</div></div>
+      <div class="logo-tile"><div class="text-logo">Tik<em>Tok</em></div></div>
+      <div class="logo-tile"><div class="text-logo">UGC</div></div>
+      <div class="logo-tile"><div class="text-logo">Reviews</div></div>
+    </div>
+
+    <!-- Aggregates -->
+    <div class="aggregates">
+      <div class="agg">
+        <div class="v">3</div>
+        <div class="k">frentes<br>integradas</div>
+      </div>
+      <div class="agg">
+        <div class="v">9<em>+</em></div>
+        <div class="k">semanas até<br>operação completa</div>
+      </div>
+      <div class="agg">
+        <div class="v">0</div>
+        <div class="k">verba paga<br>como dependência</div>
+      </div>
+      <div class="agg">
+        <div class="v">15</div>
+        <div class="k">dias de validade<br>da proposta</div>
+      </div>
+    </div>
+
+    <!-- Cases grid -->
+    <div class="cases-grid">
+      <!-- Perfil local -->
+      <article class="case strategy-card">
+        <div class="case-thumb">
+          <img src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&amp;fit=crop&amp;w=1200&amp;q=80" alt="Balcão de restaurante com atendimento local">
+          <span class="url-pill">Google + TripAdvisor</span>
+        </div>
+        <div class="case-content">
+          <div class="case-tag"><span class="num">Frente 01</span><span>Presença local</span></div>
+          <div class="case-name">Perfis que aparecem e convencem.</div>
+          <div class="case-sub">Ficha completa, reputação ativa e informação confiável.</div>
+          <p class="case-body">Auditoria da presença online atual, otimização completa do Google Business Profile e do TripAdvisor, ajuste de categorias, horários, fotos, descrições, posts e organização das ferramentas.</p>
+          <div class="case-metrics">
+            <div><div class="v">GBP</div><div class="k">Perfil<br>otimizado</div></div>
+            <div><div class="v">TA</div><div class="k">Reputação<br>monitorada</div></div>
+            <div><div class="v">Local</div><div class="k">Busca por<br>intenção</div></div>
+          </div>
+          <div class="case-stack"><strong>Entregas:</strong> auditoria · setup · categorias · fotos · posts · respostas</div>
+        </div>
+      </article>
+
+      <!-- Conteúdo -->
+      <article class="case strategy-card">
+        <div class="case-thumb">
+          <img src="https://images.unsplash.com/photo-1551218808-94e220e084d2?auto=format&amp;fit=crop&amp;w=1200&amp;q=80" alt="Cozinha preparando pratos para conteúdo">
+          <span class="url-pill">Instagram + TikTok</span>
+        </div>
+        <div class="case-content">
+          <div class="case-tag"><span class="num">Frente 02</span><span>Conteúdo orgânico</span></div>
+          <div class="case-name">A casa vira pauta recorrente.</div>
+          <div class="case-sub">Bastidor, pratos, ambiente, equipe e movimento real.</div>
+          <p class="case-body">Montagem do plano editorial e primeiras publicações orgânicas no ritmo possível para o caixa. A produção começa enxuta e ganha volume com a entrada parcial da criadora UGC na Fase 2.</p>
+          <div class="case-metrics">
+            <div><div class="v">IG</div><div class="k">Rotina<br>visual</div></div>
+            <div><div class="v">TT</div><div class="k">Vídeos<br>curtos</div></div>
+            <div><div class="v">UGC</div><div class="k">Entrada<br>gradual</div></div>
+          </div>
+          <div class="case-stack"><strong>Entregas:</strong> calendário editorial · roteiro · postagem · ajustes por desempenho</div>
+        </div>
+      </article>
+
+      <!-- Avaliações -->
+      <article class="case strategy-card">
+        <div class="case-thumb">
+          <img src="https://images.unsplash.com/photo-1528605248644-14dd04022da1?auto=format&amp;fit=crop&amp;w=1200&amp;q=80" alt="Clientes reunidos em restaurante">
+          <span class="url-pill">Prova social</span>
+        </div>
+        <div class="case-content">
+          <div class="case-tag"><span class="num">Frente 03</span><span>Avaliações</span></div>
+          <div class="case-name">Mais gente recomendando o Okeanos.</div>
+          <div class="case-sub">O cliente satisfeito vira canal de aquisição.</div>
+          <p class="case-body">Criação de uma rotina para estimular avaliações positivas, responder comentários com consistência e transformar marcações espontâneas em conteúdo que amplia a confiança do próximo cliente.</p>
+          <div class="case-metrics">
+            <div><div class="v">+★</div><div class="k">Avaliações<br>positivas</div></div>
+            <div><div class="v">DM</div><div class="k">Marcações<br>e respostas</div></div>
+            <div><div class="v">Trust</div><div class="k">Confiança<br>pré-visita</div></div>
+          </div>
+          <div class="case-stack"><strong>Entregas:</strong> fluxo de pedido · respostas · reposts · acompanhamento de reputação</div>
+        </div>
+      </article>
+
+      <!-- Campanhas -->
+      <article class="case strategy-card">
+        <div class="case-thumb">
+          <img src="https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?auto=format&amp;fit=crop&amp;w=1200&amp;q=80" alt="Grupo de pessoas em experiência gastronômica">
+          <span class="url-pill">Engajamento</span>
+        </div>
+        <div class="case-content">
+          <div class="case-tag"><span class="num">Frente 04</span><span>Campanhas orgânicas</span></div>
+          <div class="case-name">Ações que nascem dentro da casa.</div>
+          <div class="case-sub">Sem fórmula pronta, alinhadas antes de ir ao ar.</div>
+          <p class="case-body">Campanhas de engajamento desenhadas caso a caso para incentivar marcações, recomendações, vídeos curtos, fotos e avaliações. Cada ação é apresentada e combinada antes da execução.</p>
+          <div class="case-metrics">
+            <div><div class="v">01</div><div class="k">Ideia<br>por ciclo</div></div>
+            <div><div class="v">Live</div><div class="k">Cliente<br>participa</div></div>
+            <div><div class="v">Org</div><div class="k">Sem verba<br>paga</div></div>
+          </div>
+          <div class="case-stack"><strong>Entregas:</strong> mecânica · briefing · peças simples · publicação · leitura de resultado</div>
+        </div>
+      </article>
+
+      <!-- UGC -->
+      <article class="case strategy-card">
+        <div class="case-thumb">
+          <img src="https://images.unsplash.com/photo-1606787366850-de6330128bfc?auto=format&amp;fit=crop&amp;w=1200&amp;q=80" alt="Produção de conteúdo gastronômico">
+          <span class="url-pill">Criadora UGC</span>
+        </div>
+        <div class="case-content">
+          <div class="case-tag"><span class="num">Frente 05</span><span>Produção UGC</span></div>
+          <div class="case-name">Mais volume quando a base estiver pronta.</div>
+          <div class="case-sub">Parcial na Fase 2, ativa na Fase 3.</div>
+          <p class="case-body">A produção com criadora UGC entra de forma parcial na operação e ganha volume quando a casa já tiver base organizada, rotina de postagem e sinais suficientes para escalar com mais segurança.</p>
+          <div class="case-metrics">
+            <div><div class="v">F2</div><div class="k">Entrada<br>parcial</div></div>
+            <div><div class="v">F3</div><div class="k">Volume<br>ativo</div></div>
+            <div><div class="v">Add</div><div class="k">Pacotes<br>aprovados</div></div>
+          </div>
+          <div class="case-stack"><strong>Entregas:</strong> vídeos · fotos · roteiros simples · conteúdos para Instagram e TikTok</div>
+        </div>
+      </article>
+
+      <!-- Relatórios -->
+      <article class="case strategy-card">
+        <div class="case-thumb">
+          <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&amp;fit=crop&amp;w=1200&amp;q=80" alt="Mesa de trabalho com relatório e indicadores">
+          <span class="url-pill">Relatório mensal</span>
+        </div>
+        <div class="case-content">
+          <div class="case-tag"><span class="num">Frente 06</span><span>Números e rota</span></div>
+          <div class="case-name">Ajuste mensal, sem relatório decorativo.</div>
+          <div class="case-sub">O que foi feito, o que os números mostram e o que muda.</div>
+          <p class="case-body">Relatório simples ao fim de cada mês, com leitura dos perfis, avaliações, publicações e engajamento. A passagem de fase é combinada em conjunto, nunca automática.</p>
+          <div class="case-metrics">
+            <div><div class="v">Mês</div><div class="k">Fechamento<br>simples</div></div>
+            <div><div class="v">Fase</div><div class="k">Reunião de<br>alinhamento</div></div>
+            <div><div class="v">Next</div><div class="k">Ajustes<br>de rota</div></div>
+          </div>
+          <div class="case-stack"><strong>Entregas:</strong> relatório · análise · prioridades · reunião rápida no início de cada fase</div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============== MARQUEE FASES ============== -->
+<div class="marquee">
+  <div class="marquee-track">
+    <span>Fundação</span><span><em>·</em></span><span>Operação</span><span><em>·</em></span>
+    <span>Escala</span><span><em>·</em></span><span>UGC</span><span><em>·</em></span>
+    <span>Fundação</span><span><em>·</em></span><span>Operação</span><span><em>·</em></span>
+    <span>Escala</span><span><em>·</em></span><span>UGC</span><span><em>·</em></span>
+  </div>
+</div>
+
+<!-- ============== SERVICES + METHODOLOGY ============== -->
+<section class="services" id="cronograma">
+  <div class="services-head">
+    <div>
+      <div class="eyebrow" style="margin-bottom:24px;">Escopo e cronograma</div>
+      <h2 class="section-title">Base primeiro.<br><em>Escala depois.</em></h2>
+    </div>
+    <p class="body">O trabalho foi dividido em três fases para caber no caixa, organizar a base e aumentar a produção conforme o retorno começa a aparecer.</p>
+  </div>
+
+  <!-- Fase 1 -->
+  <div class="service">
+    <div class="idx">01 · Fundação</div>
+    <div>
+      <h3>Semanas 1 a 4</h3>
+      <div class="stack">
+        <span class="tag">Mês 1</span>
+        <span class="tag">aprox. 16h</span>
+        <span class="tag">consultoria e setup</span>
+        <span class="tag">R$ 1.200,00</span>
+      </div>
+    </div>
+    <div class="desc">
+      <p>Primeira etapa conservadora de propósito: arrumar a base antes de aumentar volume de produção.</p>
+      <div class="method-steps">
+        <div class="step"><span class="step-num">01</span><div class="step-body"><strong>Auditoria</strong><span>Leitura da presença online atual e diagnóstico dos principais pontos de melhoria.</span></div></div>
+        <div class="step"><span class="step-num">02</span><div class="step-body"><strong>Google e TripAdvisor</strong><span>Otimização completa dos perfis, categorias, fotos, horários e informações.</span></div></div>
+        <div class="step"><span class="step-num">03</span><div class="step-body"><strong>Plano editorial</strong><span>Definição de temas, formatos, frequência e objetivos para Instagram e TikTok.</span></div></div>
+        <div class="step"><span class="step-num">04</span><div class="step-body"><strong>Metas e indicadores</strong><span>Organização das contas, ferramentas e métricas que serão acompanhadas.</span></div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Fase 2 -->
+  <div class="service">
+    <div class="idx">02 · Operação</div>
+    <div>
+      <h3>Semanas 5 a 8</h3>
+      <div class="stack">
+        <span class="tag">Mês 2</span>
+        <span class="tag">aprox. 24h</span>
+        <span class="tag">gestão, conteúdo e UGC parcial</span>
+        <span class="tag">R$ 1.900,00</span>
+      </div>
+    </div>
+    <div class="desc">
+      <p>Com a base organizada, a rotina entra em operação e as primeiras campanhas orgânicas começam a rodar.</p>
+      <div class="method-steps">
+        <div class="step"><span class="step-num">01</span><div class="step-body"><strong>Gestão recorrente</strong><span>Acompanhamento dos perfis, respostas, atualizações e avaliações.</span></div></div>
+        <div class="step"><span class="step-num">02</span><div class="step-body"><strong>Publicações orgânicas</strong><span>Primeiras postagens seguindo o plano editorial definido na fundação.</span></div></div>
+        <div class="step"><span class="step-num">03</span><div class="step-body"><strong>Campanhas de engajamento</strong><span>Lançamento das primeiras ações para estimular marcações e avaliações.</span></div></div>
+        <div class="step"><span class="step-num">04</span><div class="step-body"><strong>UGC parcial</strong><span>Entrada inicial da produção de conteúdo com criadora UGC.</span></div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Fase 3 -->
+  <div class="service">
+    <div class="idx">03 · Escala</div>
+    <div>
+      <h3>Semana 9 em diante</h3>
+      <div class="stack">
+        <span class="tag">Mês 3+</span>
+        <span class="tag">aprox. 32h</span>
+        <span class="tag">operação completa com UGC</span>
+        <span class="tag">R$ 2.900,00 / mês</span>
+      </div>
+    </div>
+    <div class="desc">
+      <p>A produção ganha volume e as campanhas passam a rodar de forma contínua, sempre com relatório e ajustes de rota.</p>
+      <div class="method-steps">
+        <div class="step"><span class="step-num">01</span><div class="step-body"><strong>UGC ativo</strong><span>Volume maior de conteúdo para Instagram e TikTok.</span></div></div>
+        <div class="step"><span class="step-num">02</span><div class="step-body"><strong>Campanhas contínuas</strong><span>Ações orgânicas rodando com regularidade e leitura de resposta do público.</span></div></div>
+        <div class="step"><span class="step-num">03</span><div class="step-body"><strong>Relatórios</strong><span>Fechamento mensal com o que foi feito e o que os números mostram.</span></div></div>
+        <div class="step"><span class="step-num">04</span><div class="step-body"><strong>Ajustes de rota</strong><span>Priorização do que performa melhor e evolução gradual da operação.</span></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== PROCESS ============== -->
+<section class="process">
+  <div class="process-grid">
+    <div>
+      <div class="eyebrow">Na prática</div>
+    </div>
+    <div class="process-content">
+      <h2>Simples de começar.<br>Fácil de <em>avaliar.</em></h2>
+      <div class="process-steps">
+        <div class="process-step">
+          <div class="pn">01</div>
+          <h4>Contrato mensal</h4>
+          <p>Sem fidelidade longa. O resultado é avaliado a cada fase, com liberdade para ajustar o ritmo.</p>
+        </div>
+        <div class="process-step">
+          <div class="pn">02</div>
+          <h4>Fases combinadas</h4>
+          <p>A passagem de uma fase para outra é decidida junto, nunca automática.</p>
+        </div>
+        <div class="process-step">
+          <div class="pn">03</div>
+          <h4>Relatório mensal</h4>
+          <p>Fechamento simples com o que foi feito, o que os números mostram e quais ajustes entram no próximo ciclo.</p>
+        </div>
+        <div class="process-step">
+          <div class="pn">04</div>
+          <h4>Alinhamento por etapa</h4>
+          <p>Reunião rápida no início de cada fase para revisar prioridade, escopo e expectativa.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== MARQUEE CANAIS ============== -->
+<div class="marquee">
+  <div class="marquee-track">
+    <span>Avaliações</span><span><em>·</em></span><span>Perfil local</span><span><em>·</em></span>
+    <span>Conteúdo</span><span><em>·</em></span><span>Reputação</span><span><em>·</em></span>
+    <span>UGC</span><span><em>·</em></span><span>Avaliações</span><span><em>·</em></span>
+    <span>Perfil local</span><span><em>·</em></span><span>Conteúdo</span><span><em>·</em></span>
+  </div>
+</div>
+
+<!-- ============== EXPERTISE ============== -->
+<section class="expertise">
+  <div class="expertise-grid">
+    <div class="expertise-content">
+      <div class="eyebrow">Canais da operação</div>
+      <h2>Cada ponto de contato<br>com uma função <em>clara.</em></h2>
+      <p>O plano conecta busca local, reputação e conteúdo social. O objetivo é aparecer melhor, gerar mais confiança e transformar o movimento real da casa em presença digital constante.</p>
+    </div>
+    <div class="markets">
+      <div class="item"><span>Google Business Profile</span><span class="num">01</span></div>
+      <div class="item"><span>TripAdvisor</span><span class="num">02</span></div>
+      <div class="item"><span>Instagram</span><span class="num">03</span></div>
+      <div class="item"><span>TikTok</span><span class="num">04</span></div>
+      <div class="item"><span>Conteúdo UGC</span><span class="num">05</span></div>
+      <div class="item"><span>Avaliações e marcações</span><span class="num">06</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== TESTIMONIAL ============== -->
+<section class="testimonial">
+  <div class="eyebrow" style="justify-content:center;">Produção UGC</div>
+  <h3>Conteúdo com presença humana,<br><em>entrando no ritmo certo.</em></h3>
+  <div class="clients-strip">
+    <div class="client">Fase 2 parcial</div>
+    <div class="client">Fase 3 ativa</div>
+    <div class="client">Valor embutido</div>
+    <div class="client">Extras aprovados</div>
+  </div>
+  <div class="quote">
+    <p>"A produção de conteúdo com a criadora UGC entra de forma parcial na Fase 2 e ganha volume na Fase 3. Esse valor já está embutido no investimento mensal de cada fase, para que a Fase 1 fique leve e a casa consiga respirar no início."</p>
+    <div class="who">Observação da proposta · Pacotes adicionais sempre orçados e aprovados antes</div>
+  </div>
+</section>
+
+<!-- ============== INVESTMENT ============== -->
+<section class="relator" id="investimento">
+  <div class="wrap">
+    <div class="relator-head">
+      <div>
+        <div class="eyebrow">Investimento</div>
+        <h2>Mensal por fase,<br>com crescimento <em>combinado.</em></h2>
+      </div>
+      <p class="body">O modelo é baseado em horas de consultoria, planejamento e operação, com valor mensal fechado por fase. A primeira fase entra em valor conservador para não pesar no caixa enquanto o resultado ainda está sendo construído.</p>
+    </div>
+
+    <div class="relator-grid">
+      <div class="relator-features">
+        <div class="relator-feature">
+          <div class="n">01</div>
+          <div>
+            <h5>Evolução por retorno</h5>
+            <p>Conforme a operação ganha volume e o retorno aparece, o investimento sobe junto, sempre combinado antes.</p>
+          </div>
+        </div>
+        <div class="relator-feature">
+          <div class="n">02</div>
+          <div>
+            <h5>UGC incluído</h5>
+            <p>A criadora UGC entra parcialmente na Fase 2 e com mais volume na Fase 3. Esse custo já está embutido no mensal.</p>
+          </div>
+        </div>
+        <div class="relator-feature">
+          <div class="n">03</div>
+          <div>
+            <h5>Sem fidelidade longa</h5>
+            <p>Contrato mensal. O Okeanos avalia resultado a cada fase e decide o próximo passo com clareza.</p>
+          </div>
+        </div>
+        <div class="relator-feature">
+          <div class="n">04</div>
+          <div>
+            <h5>Condições</h5>
+            <p>Valores em reais. Proposta válida por 15 dias. Pagamento mensal, com vencimento combinado no fechamento.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="dash">
+        <div class="dash-bar">
+          <span>INVESTIMENTO · OKEANOS / MAIO 2026</span>
+          <div class="lights"><span class="on"></span><span class="on"></span><span></span></div>
+        </div>
+        <div class="dash-kpis">
+          <div class="dash-kpi">
+            <div class="k">Fase 1</div>
+            <div class="v">R$1.200</div>
+            <div class="delta">Fundação</div>
+          </div>
+          <div class="dash-kpi">
+            <div class="k">Fase 2</div>
+            <div class="v">R$1.900</div>
+            <div class="delta">Operação</div>
+          </div>
+          <div class="dash-kpi">
+            <div class="k">Fase 3</div>
+            <div class="v">R$2.900</div>
+            <div class="delta">Escala</div>
+          </div>
+        </div>
+        <div class="dash-chart">
+          <div class="h">
+            <div class="ttl">Ritmo da operação por fase</div>
+            <div class="legend">
+              <span>Horas</span>
+              <span class="alt">Base</span>
+            </div>
+          </div>
+          <svg viewBox="0 0 400 100" preserveAspectRatio="none">
+            <defs>
+              <linearGradient id="gAcc" x1="0" x2="0" y1="0" y2="1">
+                <stop offset="0%" stop-color="#1440fc" stop-opacity="0.5"/>
+                <stop offset="100%" stop-color="#1440fc" stop-opacity="0"/>
+              </linearGradient>
+            </defs>
+            <path d="M0,75 L50,68 L100,72 L150,52 L200,46 L250,34 L300,28 L350,18 L400,12 L400,100 L0,100 Z" fill="url(#gAcc)"/>
+            <path d="M0,75 L50,68 L100,72 L150,52 L200,46 L250,34 L300,28 L350,18 L400,12" stroke="#1440fc" stroke-width="2" fill="none"/>
+            <path d="M0,84 L50,80 L100,76 L150,72 L200,68 L250,65 L300,62 L350,58 L400,55" stroke="rgba(255,255,255,0.4)" stroke-width="1.5" stroke-dasharray="3 3" fill="none"/>
+          </svg>
+        </div>
+        <div class="dash-table investment-table">
+          <div class="row head">
+            <span>Fase</span><span>Período</span><span>Horas estimadas</span><span>Investimento</span>
+          </div>
+          <div class="row"><span><strong>Fase 1 · Fundação</strong></span><span>Mês 1</span><span>aprox. 16h</span><span class="ch">R$ 1.200,00</span></div>
+          <div class="row"><span><strong>Fase 2 · Operação</strong></span><span>Mês 2</span><span>aprox. 24h</span><span class="ch">R$ 1.900,00</span></div>
+          <div class="row"><span><strong>Fase 3 · Escala</strong></span><span>Mês 3+</span><span>aprox. 32h</span><span class="ch">R$ 2.900,00/mês</span></div>
+        </div>
+        <div class="price-note">
+          Se fizer sentido ampliar a produção além do previsto, como mais vídeos, ensaios ou ações específicas, isso entra como pacote adicional, sempre orçado e aprovado antes.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== NEXT STEPS ============== -->
+<section class="blog" id="proximos-passos">
+  <div class="blog-head">
+    <div>
+      <div class="eyebrow" style="margin-bottom:24px;">Próximos passos</div>
+      <h2 class="section-title">Se fizer sentido,<br><em>começamos pela base.</em></h2>
+    </div>
+    <p style="font-size:15px; line-height:1.6; color: var(--muted); max-width:420px;">A aprovação inicia a Fase 1. Depois da fundação, revisamos os sinais do primeiro mês e combinamos juntos se a operação avança para a Fase 2.</p>
+  </div>
+  <div class="blog-grid">
+    <article class="post">
+      <div class="cat">01 · Fechamento</div>
+      <div class="ttl">Confirmação do escopo, vencimento mensal e início da Fase 1.</div>
+      <div class="meta">Proposta válida por 15 dias</div>
+    </article>
+    <article class="post">
+      <div class="cat">02 · Alinhamento</div>
+      <div class="ttl">Reunião rápida para acessos, prioridades e calendário inicial.</div>
+      <div class="meta">Início da fundação</div>
+    </article>
+    <article class="post">
+      <div class="cat">03 · Operação</div>
+      <div class="ttl">Auditoria, otimização dos perfis e plano editorial do Okeanos.</div>
+      <div class="meta">Semanas 1 a 4</div>
+    </article>
+  </div>
+</section>
+
+<!-- ============== FOOTER ============== -->
+<footer id="contato">
+  <div class="inner">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand"><img src="public/logo/svg/sy-logo-white.svg" alt="Sync"></div>
+        <div class="eyebrow" style="color:#fff; margin-bottom:24px;">MSYNC · Proposta comercial</div>
+        <h2>Vamos colocar<br>o Okeanos em <em>movimento?</em></h2>
+        <p>Começamos enxuto, medimos o que muda e só aumentamos a operação quando fizer sentido para o caixa.</p>
+        <a href="mailto:joao@syncagencia.com" class="btn btn-primary">Aprovar proposta</a>
+      </div>
+      <div>
+        <div style="font-size:12px; letter-spacing:0.12em; text-transform:uppercase; color:rgba(255,255,255,0.5); margin-bottom:16px;">Responsável</div>
+        <p style="font-size:18px; color:#fff; line-height:1.5;">
+          João Vitor Moitinho Silva ME<br>
+          MSYNC · moitinho.dev<br>
+          <a href="mailto:joao@syncagencia.com" style="color: var(--accent);">joao@syncagencia.com</a><br>
+          <span style="color: rgba(255,255,255,0.7);">Proposta válida por 15 dias</span>
+        </p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>© 2026 MSYNC · Gestão de presença online</div>
+      <div>Okeanos Hamburgueria · Ilhabela, SP</div>
+      <div class="links">
+        <a href="#cenario">Cenário</a>
+        <a href="#objetivos">Objetivos</a>
+        <a href="#cronograma">Cronograma</a>
+        <a href="#investimento">Investimento</a>
+      </div>
+      <div class="social">
+        <a href="https://moitinho.dev">moitinho.dev</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

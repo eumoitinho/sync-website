@@ -1,36 +1,17 @@
-import { Fragment } from 'react'
-
-const statementWords = [
-  'Na',
-  'Sync,',
-  'criamos',
-  'estratégias',
-  'digitais',
-  'que',
-  'geram',
-  'crescimento',
-  'mensurável.',
-  'Com',
-  'foco',
-  'em',
-  'performance,',
-  'ajudamos',
-  'empresas',
-  'a',
-  'avançar.',
+const statementParagraphs = [
+  'A Sync começou em 2015 como um estúdio de design e evoluiu para uma operação de desenvolvimento, marca e marketing digital.',
+  'Já atendemos mais de 50 clientes no Brasil, nos EUA e na Europa, com entregas para saúde, educação, música, eventos e tecnologia.',
+  'Hoje, unimos repertório técnico e olhar estratégico para criar projetos digitais claros, consistentes e prontos para crescer.',
 ]
 
 function AboutStatement() {
   return (
     <div className="contents" data-component-id="AboutStatement">
-      <div className='text-[#050814] leading-[1.2] [font-family:Geist,"Geist_Placeholder",sans-serif,system-ui,sans-serif] font-semibold text-[60px] sticky opacity-0 caret-[#050814] top-0 bottom-auto inset-x-auto'>
-        {statementWords.map((word, index) => (
-          <Fragment key={`${word}-${index}`}>
-            <span className="opacity-100 [transition-behavior:normal,normal] duration-[0.2s,0.2s] ease-[ease-out,ease-out] delay-[0s,0s] transition-[filter,opacity] inline-block blur-0 caret-[#050814] mr-[15px]">
-              {word}
-            </span>
-            {index < statementWords.length - 1 ? ' ' : null}
-          </Fragment>
+      <div className='text-[#050814] leading-[1.2] [font-family:Geist,"Geist_Placeholder",sans-serif,system-ui,sans-serif] font-semibold text-[42px] opacity-100 caret-[#050814]'>
+        {statementParagraphs.map((paragraph) => (
+          <p key={paragraph} className="[word-break:break-word] caret-[#050814] mt-0 mb-6 last:mb-0">
+            {paragraph}
+          </p>
         ))}
       </div>
     </div>

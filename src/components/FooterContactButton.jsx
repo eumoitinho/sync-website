@@ -1,7 +1,7 @@
 function FooterContactButton() {
   return (
     <div
-      className="opacity-100 w-[200px] relative shrink-0"
+      className="opacity-100 w-[240px] relative shrink-0"
       data-component-id="FooterContactButton"
     >
       <a
@@ -24,7 +24,7 @@ function FooterContactButton() {
             </svg>
           </div>
         </div>
-        <div className="[--extracted-r6o4lv:var(--token-1ba3eb5c-3d1d-417e-a110-baadc5d93e3d,rgb(255,255,255))] [--framer-paragraph-spacing:0px] opacity-100 [white-space-collapse:preserve] [text-wrap-mode:nowrap] absolute z-[1] flex flex-col shrink-0 justify-start translate-x-0 -translate-y-2/4 outline-[3px] outline-[#1440fc] caret-[#1440fc] select-none left-auto right-[39px] top-2/4 bottom-auto">
+        <div className="[--extracted-r6o4lv:var(--token-1ba3eb5c-3d1d-417e-a110-baadc5d93e3d,rgb(255,255,255))] [--framer-paragraph-spacing:0px] opacity-100 [white-space-collapse:preserve] [text-wrap-mode:nowrap] absolute z-[1] flex flex-col shrink-0 justify-start translate-x-0 -translate-y-2/4 outline-[3px] outline-[#1440fc] caret-[#1440fc] select-none left-auto right-[32px] top-2/4 bottom-auto">
           <p className='[--framer-text-color:var(--extracted-r6o4lv,var(--token-1ba3eb5c-3d1d-417e-a110-baadc5d93e3d,rgb(255,255,255)))] text-white leading-[26px] [font-family:Geist,"Geist_Placeholder",sans-serif,system-ui,sans-serif] font-medium [text-wrap-mode:nowrap] caret-white select-none my-0'>
             Fale conosco
           </p>

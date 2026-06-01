@@ -9,8 +9,6 @@ import ServicesMarquee from './components/ServicesMarquee';
 import DigitalCampaignsService from './components/DigitalCampaignsService';
 import GrowthStrategyService from './components/GrowthStrategyService';
 import BrandConsultingService from './components/BrandConsultingService';
-import MarketingStrategyService from './components/MarketingStrategyService';
-import BrandDevelopmentService from './components/BrandDevelopmentService';
 import ProcessSection from './components/ProcessSection';
 import ExpertiseMarquee from './components/ExpertiseMarquee';
 import ExpertiseSection from './components/ExpertiseSection';
@@ -93,8 +91,6 @@ function App() {
                   <DigitalCampaignsService />
                   <GrowthStrategyService />
                   <BrandConsultingService />
-                  <MarketingStrategyService />
-                  <BrandDevelopmentService />
                 </div>
               </section>
               <section className="bg-[#f6f4ef] w-full h-min relative flex overflow-x-hidden overflow-y-hidden shrink-0 justify-center content-center items-center gap-y-0 gap-x-0 px-10">

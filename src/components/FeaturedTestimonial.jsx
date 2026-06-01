@@ -6,15 +6,14 @@ function FeaturedTestimonial() {
     >
       <div className="[transform:none] [white-space-collapse:preserve] [text-wrap-mode:wrap] [word-break:break-word] w-full relative z-[2] flex flex-col shrink-0 justify-start outline-[3px]">
         <h2 className='[--framer-text-color:var(--token-288ffea9-8735-42f9-b14e-c55b83bbe709,rgb(246,244,239))] text-[#f6f4ef] leading-[78px] [font-family:Geist,"Geist_Placeholder",sans-serif,system-ui,sans-serif] font-semibold text-[60px] tracking-[-2.4px] text-left [word-break:break-word] caret-[#f6f4ef] my-0'>
-          "A Sync transformou completamente nossa marca. A nova estratégia e o site nos deram mais clareza, presença e autoridade."
+          "A plataforma deu ao marketing autonomia para atualizar planos e preços sem acionar desenvolvimento."
         </h2>
       </div>
       <div className="contents">
         <div className="[transform:none] [white-space-collapse:preserve] [text-wrap-mode:wrap] [word-break:break-word] w-full relative z-[2] flex flex-col shrink-0 justify-start outline-[3px]">
           <p className='[--framer-text-color:var(--token-288ffea9-8735-42f9-b14e-c55b83bbe709,rgb(246,244,239))] text-[#f6f4ef] leading-[32.4px] [font-family:Geist,"Geist_Placeholder",sans-serif,system-ui,sans-serif] font-medium text-[18px] tracking-[-0.36px] [word-break:break-word] caret-[#f6f4ef] my-0'>
-            —
             <strong className="[word-break:break-word] caret-[#f6f4ef]">
-              Sarah L., fundadora da ElevateCommerce
+              Cliente Live Academia
             </strong>
           </p>
         </div>

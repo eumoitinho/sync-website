@@ -19,8 +19,6 @@ const revealIds = [
   'DigitalCampaignsCard',
   'GrowthStrategyCard',
   'BrandConsultingCard',
-  'MarketingStrategyCard',
-  'BrandDevelopmentCard',
   'ProcessSteps',
   'ExpertiseSection',
   'TestimonialsSection',
